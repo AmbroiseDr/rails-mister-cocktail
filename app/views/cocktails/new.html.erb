@@ -1,0 +1,17 @@
+ <div class="container">
+  <div class="card mt-4 p-2">
+    <%= simple_form_for @cocktail do |f| %>
+      <div class="form-row">
+        <div class="col-6">
+          <%= f.input :name %>
+        </div>
+        <div class="col-6">
+          <%= f.input :description %>
+        </div>
+      </div>
+      <%= f.input :url %>
+      <%= f.button :submit,"Let's add a dose now !", class: "btn btn-primary w-100" %>
+    <% end %>
+  </div>
+
+ </div>

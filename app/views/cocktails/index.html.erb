@@ -1,0 +1,20 @@
+<div class="container">
+    <div class="row">
+      <% @cocktails.each do |cocktail| %>
+        <div class="col-3">
+          <div class="card-trip mb-4  ">
+            <img src="<%= cocktail.url%>" />
+            <div class="card-trip-infos">
+              <div>
+                <h2><%=  cocktail.name%></h2>
+                <p><%=  cocktail.description.first(50)%> <%= "..." if cocktail.description.length > 50 %></p>
+              </div>
+              <h2 class="card-trip-pricing"><%= cocktail.ingredients.count %></h2>
+              <%= link_to "", cocktail_path(cocktail), class: "card-trip-user avatar-bordered image-back"  %>
+              <!-- <img src="https://www.gifi.fr/media/catalog/product/cache/1/image/1000x/9df78eab33525d08d6e5fb8d27136e95/3/7/377354.jpg" class="card-trip-user avatar-bordered" /> -->
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
